@@ -1,5 +1,6 @@
-Garage1.3/scripts/ linguist-vendored
-Garage1.3/Views/ linguist-vendored
+Garage1.3/scripts/* linguist-vendored
+Garage1.3/Views/* linguist-vendored
+
 
 ###############################################################################
 # Set default behavior to automatically normalize line endings.
