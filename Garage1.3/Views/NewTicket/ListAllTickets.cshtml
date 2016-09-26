@@ -1,0 +1,61 @@
+﻿@model IEnumerable<Garage1._3.Models.Garage>
+
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Plate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ParkingSpot)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UniqueCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOfArrival)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOfDeparture)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Plate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ParkingSpot)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UniqueCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeOfArrival)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TimeOfDeparture)
+        </td>
+        <td >
+            @*@Html.ActionLink("Delete", "Delete", "NewTicket", new { garageId = item.garageId }, null)*@
+            @using (Html.BeginForm("Delete", "NewTicket"))
+            {
+                @Html.Hidden("garageId", item.garageId)
+                 <input type="submit" value="Delete" />
+            }
+               
+        </td>
+    </tr>
+}
+
+</table>

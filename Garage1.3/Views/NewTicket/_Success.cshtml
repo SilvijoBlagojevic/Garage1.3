@@ -1,0 +1,46 @@
+﻿@model Garage1._3.Models.Garage
+
+@{ 
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div>
+    <h4>Your important info:</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Plate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingSpot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingSpot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniqueCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfArrival)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfArrival)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.garageId }) |
+    @Html.ActionLink("Back", "Index", "Garages")
+</p>

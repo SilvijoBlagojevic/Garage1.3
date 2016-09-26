@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Garage";
+}
+
+<h3>Please select an option: </h3></br>
+
+<div class="btn-group btn-group-justified" role="group" >
+    <a class = "btn btn-default" href="@Url.Action("New", "NewTicket")"> <h1>New Ticket</h1></a>
+    <a class = "btn btn-default"  href="@Url.Action("Pay", "PayTicket")"><h1>Pay Ticket</h1></a>
+ </div>
+<br/>
+<div>
+    @Html.ActionLink("List Of All Garages", "ListAllTickets", "NewTicket")
+</div>
+

@@ -1,0 +1,65 @@
+﻿@model Garage1._3.Models.Garage
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Garage</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Plate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Plate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ParkingSpot)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ParkingSpot)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UniqueCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UniqueCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfArrival)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfArrival)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOfDeparture)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOfDeparture)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeForCharge)
+        </dt>
+
+        <dd>
+        @Html.DisplayFor(model => model.TimeForCharge)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Back", "Index", "Garages")
+</p>
