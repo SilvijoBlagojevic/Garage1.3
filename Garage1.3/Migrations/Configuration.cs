@@ -10,6 +10,7 @@ namespace Garage1._3.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
+            AutomaticMigrationDataLossAllowed = true;
             ContextKey = "Garage1._3.Models.GarageContext";
         }
 

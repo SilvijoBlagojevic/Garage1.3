@@ -4,11 +4,9 @@
     ViewBag.Title = "List";
 }
 
-<h2>List</h2>
+<h2>List of all Garages</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
+
 <table class="table">
     <tr>
         <th>
@@ -48,12 +46,12 @@
         </td>
         <td >
             @*@Html.ActionLink("Delete", "Delete", "NewTicket", new { garageId = item.garageId }, null)*@
-            @using (Html.BeginForm("Delete", "NewTicket"))
-            {
-                @Html.Hidden("garageId", item.garageId)
-                 <input type="submit" value="Delete" />
-            }
-               
+          @*@using (Html.BeginForm("Delete", "NewTicket"))
+    {
+        @Html.Hidden("garageId", item.garageId)
+         <input type="submit" value="Delete" />
+    }*@ 
+        
         </td>
     </tr>
 }

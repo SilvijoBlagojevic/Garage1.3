@@ -36,7 +36,7 @@ namespace Garage1._3.Controllers
 
             if (alreadyInDb)
             {
-                ModelState.AddModelError("", "Parking place may not exist or all of 50 parking spaces are busy");
+                ModelState.AddModelError("", "Parking place may not exist, it is busy or all of 50 parking spaces are busy ");
                 return View();
             }
 
@@ -44,7 +44,7 @@ namespace Garage1._3.Controllers
 
             if (numberOfBusySpots <= 50 && (garage.ParkingSpot > 1 && !(garage.ParkingSpot <=50)))
             {
-                ModelState.AddModelError("", "That place is busy!");
+                ModelState.AddModelError("", "That place is busy or not exist");
                 return View();
             }
 

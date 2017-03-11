@@ -13,11 +13,13 @@ namespace Garage1._3.Models
         
         [StringLength(12, MinimumLength = 4, ErrorMessage = "Min 4 characters is required, max 12")]
         [Required(ErrorMessage = "Plates nummbers is required")]
-        [Display(Name = "Plate number")]
+        [RegularExpression("^[a-zA-Z0-9]+$", ErrorMessage = "For registration plate please use only letters and numbers")]
+        [Display(Name = "Registration plate")]
         public string Plate { get; set; }
 
         [Required(ErrorMessage = "Position of car is required")]
         [Display(Name = "Parking spot number")]
+        [Range(1, 50)]
         public int ParkingSpot { get; set; }
 
         [Display(Name = "Your Uniqe Code")]
@@ -30,6 +32,8 @@ namespace Garage1._3.Models
         public DateTime ? TimeOfDeparture { get; set; }
 
         [Display(Name = "For Charge in €")]
+
+        [DisplayFormat(DataFormatString = "{0:N}", ApplyFormatInEditMode = true)]
         public double? TimeForCharge { get; set; }
 
     }
